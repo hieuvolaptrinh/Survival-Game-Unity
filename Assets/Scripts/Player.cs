@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -8,11 +9,22 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer; // để lật nhân vật nếu di chuyển qua trái
     private Animator animator;// để nhận viết là đang đứng yên hay di chuyển vì có đặt biến isRun
 
+    [SerializeField] private float maxHp = 100f;
+    private float currentHp;
+    [SerializeField] private Image hpBar; // Tham chiếu đến Image của thanh HP
+
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+    }
+    private void Start()
+    {
+        currentHp = maxHp;
+        UpdateHpBar();
     }
 
     private void Update()
@@ -41,10 +53,28 @@ public class Player : MonoBehaviour
             animator.SetBool("isRun", false);
     }
 
-    public void TakeDamage(){
-        Die();
+    public void TakeDamage(float damage){
+        currentHp -= damage;
+        currentHp = Mathf.Max(currentHp, 0);
+        UpdateHpBar();
+        if(currentHp <= 0){
+            Die();
+        }
     }
     public void Die(){
        Destroy(gameObject);
+    }
+    private void UpdateHpBar(){
+        if(hpBar != null){
+            hpBar.fillAmount = currentHp / maxHp; // là phần ui canva đã tạo có property fillAmount để hiển thị phần trăm hp còn lại
+        }
+    }
+
+    public void Heal(float healAmount){
+       if(currentHp < maxHp){
+           currentHp += healAmount;
+           currentHp = Mathf.Min(currentHp, maxHp);
+           UpdateHpBar();
+       }
     }
 }

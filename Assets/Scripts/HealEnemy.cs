@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class BasicEnemy : Enemy
+public class HealEnemy : Enemy
 {
+ 
+// lượng máu hồi lại cho player
+[SerializeField] private float healValue = 20f;
 
-    //va chạm với playere
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -17,5 +19,14 @@ public class BasicEnemy : Enemy
         {
             player.TakeDamage(stayDamage);
         }
+    }
+
+public override void Die(){
+    base.Die();
+       HealPlayer();
+    }
+
+    public  void HealPlayer(){
+        player.Heal(healValue);
     }
 }
