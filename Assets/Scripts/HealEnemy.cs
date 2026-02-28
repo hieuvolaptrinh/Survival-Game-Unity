@@ -6,20 +6,7 @@ public class HealEnemy : Enemy
 // lượng máu hồi lại cho player
 [SerializeField] private float healValue = 20f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player.TakeDamage(enterDamage);
-        }
-    } 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player.TakeDamage(stayDamage);
-        }
-    }
+// Logic gây damage đã được thừa kế từ class Enemy
 
 public override void Die(){
     base.Die();

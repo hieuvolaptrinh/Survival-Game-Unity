@@ -3,6 +3,7 @@ using UnityEngine.UI;
 public abstract class Enemy : MonoBehaviour{
     [SerializeField] protected float enemyMoveSpeed = 1f;
     protected Player player;
+    protected Rigidbody2D rb;
     [SerializeField] protected float maxHp =50f;
     protected float currentHp;
     [SerializeField] protected Image hpBar; // Tham chiếu đến Image của thanh HP
@@ -11,6 +12,7 @@ public abstract class Enemy : MonoBehaviour{
 
     protected virtual void Start(){
         player = FindObjectOfType<Player>();
+        rb = GetComponent<Rigidbody2D>();
         currentHp = maxHp;
         UpdateHpBar();
     }
@@ -19,9 +21,10 @@ public abstract class Enemy : MonoBehaviour{
         MoveToPlayer();
     }
 protected void MoveToPlayer(){
-    if(player !=null){
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemyMoveSpeed * Time.deltaTime);
-    FlipEnemy();
+    if(player !=null && rb != null){
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        rb.linearVelocity = direction * enemyMoveSpeed;
+        FlipEnemy();
     }
 }
 protected void FlipEnemy(){
@@ -40,6 +43,24 @@ public virtual void TakeDamage(float damage){
 }
 public virtual void Die(){
     Destroy(gameObject);
+}
+
+protected virtual void OnCollisionEnter2D(Collision2D collision){
+    if(collision.gameObject.CompareTag("Player")){
+        Player playerComponent = collision.gameObject.GetComponent<Player>();
+        if(playerComponent != null){
+            playerComponent.TakeDamage(enterDamage);
+        }
+    }
+}
+
+protected virtual void OnCollisionStay2D(Collision2D collision){
+    if(collision.gameObject.CompareTag("Player")){
+        Player playerComponent = collision.gameObject.GetComponent<Player>();
+        if(playerComponent != null){
+            playerComponent.TakeDamage(stayDamage * Time.deltaTime);
+        }
+    }
 }
 
 protected void UpdateHpBar(){

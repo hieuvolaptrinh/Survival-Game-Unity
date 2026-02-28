@@ -13,19 +13,6 @@ public class ExplosionEnemy : Enemy
        base.Die();
        CreateExplosion();
    }
-
-   private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player.TakeDamage(enterDamage);
-        }
-    } 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player.TakeDamage(stayDamage);
-        }
-    }
+   
+   // Logic gây damage đã được thừa kế từ class Enemy
 }

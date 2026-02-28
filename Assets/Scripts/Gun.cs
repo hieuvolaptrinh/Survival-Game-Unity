@@ -10,12 +10,16 @@ public class Gun : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float shotDelay = 0.15f;
     private float nextShot;
-    [SerializeField] private int maxAmmo = 24;
+    [SerializeField] private int maxAmmo = 100;    
     public int currentAmmo;
+    // tương tác với TextMesh Pro đã tạo bên trong Canvas để hiển thị số đạn hiện tại
+    [SerializeField] private TMPro.TextMeshProUGUI ammoText;
+
 
     void Start()
     {
         currentAmmo = maxAmmo;
+        UpdateAmmoText();
     }
 
     void Update()
@@ -49,6 +53,7 @@ public class Gun : MonoBehaviour
            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
             nextShot = Time.time + shotDelay;
             currentAmmo--;
+            UpdateAmmoText();
         }
     }
 
@@ -58,5 +63,18 @@ public class Gun : MonoBehaviour
         {
             currentAmmo = maxAmmo;
         }
+    }
+
+    private void UpdateAmmoText()
+    {
+        if (ammoText != null)
+        {
+            ammoText.text = $"{currentAmmo}";
+            if (currentAmmo <= 0)
+            {
+                ammoText.text = "Empty";
+            }
+        }
+
     }
 }
