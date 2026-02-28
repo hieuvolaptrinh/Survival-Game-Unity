@@ -22,6 +22,7 @@ public class Gun : MonoBehaviour
     {
         RotateGun();
         Shoot();
+        Reload();
     }
 
     void RotateGun()
@@ -45,9 +46,17 @@ public class Gun : MonoBehaviour
         // 0 tương ứng với nút chuột trái
         if (Input.GetMouseButton(0) && Time.time >= nextShot && currentAmmo > 0)
         {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+           Instantiate(bulletPrefab, firePos.position, firePos.rotation);
             nextShot = Time.time + shotDelay;
             currentAmmo--;
+        }
+    }
+
+    void Reload()
+    {
+        if(Input.GetMouseButtonDown(1) && currentAmmo < maxAmmo) // 1 tương ứng với nút chuột phải
+        {
+            currentAmmo = maxAmmo;
         }
     }
 }

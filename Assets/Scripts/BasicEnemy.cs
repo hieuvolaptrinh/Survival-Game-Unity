@@ -1,0 +1,14 @@
+using UnityEngine;
+
+public class BasicEnemy : Enemy
+{
+
+    //va chạm với playere
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+           player.TakeDamage();
+        }
+    } 
+}

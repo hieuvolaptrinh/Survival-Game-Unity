@@ -40,4 +40,11 @@ public class Player : MonoBehaviour
         else
             animator.SetBool("isRun", false);
     }
+
+    public void TakeDamage(){
+        Die();
+    }
+    public void Die(){
+       Destroy(gameObject);
+    }
 }

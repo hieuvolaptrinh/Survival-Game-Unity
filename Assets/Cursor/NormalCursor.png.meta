@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 02da3ff43637a4e4e87ed5f06efca38b
+guid: 7f96ced277e6291449813b999bf390ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2572236292851511218
-    second: Trees_0
+      213: 1875904374283827972
+    second: NormalCursor_0
   - first:
-      213: 6224024930817484846
-    second: Trees_1
+      213: -606691221415637714
+    second: NormalCursor_1
   - first:
-      213: -8911251428918342384
-    second: Trees_2
+      213: -3470385883638452033
+    second: NormalCursor_2
   - first:
-      213: 2656247834339299217
-    second: Trees_3
-  - first:
-      213: -8876335399824902483
-    second: Trees_4
-  - first:
-      213: 5891757792927052577
-    second: Trees_5
+      213: -9039236581720599066
+    second: NormalCursor_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,7 +33,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -66,13 +60,13 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -128,133 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Trees_0
+      name: NormalCursor_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1
-        width: 34
-        height: 56
+        x: 8
+        y: 29
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bf28c1b74b62b320800000000000000
-      internalID: 2572236292851511218
+      spriteID: 40bf9c5e61d880a10800000000000000
+      internalID: 1875904374283827972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_1
+      name: NormalCursor_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 1
-        width: 26
-        height: 62
+        x: 30
+        y: 29
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e282d82c2bd206650800000000000000
-      internalID: 6224024930817484846
+      spriteID: e2d4c2b6c899497f0800000000000000
+      internalID: -606691221415637714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_2
+      name: NormalCursor_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 48
-        width: 21
-        height: 10
+        x: 8
+        y: 8
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01d412b0a00e45480800000000000000
-      internalID: -8911251428918342384
+      spriteID: fb0333cfc66b6dfc0800000000000000
+      internalID: -3470385883638452033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_3
+      name: NormalCursor_3
       rect:
         serializedVersion: 2
-        x: 107
-        y: 48
-        width: 12
-        height: 6
+        x: 30
+        y: 8
+        width: 10
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19fc139f453ecd420800000000000000
-      internalID: 2656247834339299217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees_4
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 1
-        width: 29
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da636329bfbe0d480800000000000000
-      internalID: -8876335399824902483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees_5
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 1
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1237e0e2f7ab3c150800000000000000
-      internalID: 5891757792927052577
+      spriteID: 6e5d3d9883e2e8280800000000000000
+      internalID: -9039236581720599066
       vertices: []
       indices: 
       edges: []
@@ -263,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3c15c187772f3054b9e77c5458858144
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -271,16 +221,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Trees_0: 2572236292851511218
-      Trees_1: 6224024930817484846
-      Trees_2: -8911251428918342384
-      Trees_3: 2656247834339299217
-      Trees_4: -8876335399824902483
-      Trees_5: 5891757792927052577
+      NormalCursor_0: 1875904374283827972
+      NormalCursor_1: -606691221415637714
+      NormalCursor_2: -3470385883638452033
+      NormalCursor_3: -9039236581720599066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

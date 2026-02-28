@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 02da3ff43637a4e4e87ed5f06efca38b
+guid: 2d12f517b25ae3846a6fed02708b54b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2572236292851511218
-    second: Trees_0
+      213: 1702279688969781617
+    second: BasicEnemy_0
   - first:
-      213: 6224024930817484846
-    second: Trees_1
+      213: -1167993931104646600
+    second: BasicEnemy_1
   - first:
-      213: -8911251428918342384
-    second: Trees_2
+      213: 8770043384459367301
+    second: BasicEnemy_2
   - first:
-      213: 2656247834339299217
-    second: Trees_3
+      213: -8272243146081703319
+    second: BasicEnemy_3
   - first:
-      213: -8876335399824902483
-    second: Trees_4
+      213: 5225461376936292303
+    second: BasicEnemy_4
   - first:
-      213: 5891757792927052577
-    second: Trees_5
+      213: -2395097988536658720
+    second: BasicEnemy_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Trees_0
+      name: BasicEnemy_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1
-        width: 34
-        height: 56
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bf28c1b74b62b320800000000000000
-      internalID: 2572236292851511218
+      spriteID: 1710869ab56bf9710800000000000000
+      internalID: 1702279688969781617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_1
+      name: BasicEnemy_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 1
-        width: 26
-        height: 62
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e282d82c2bd206650800000000000000
-      internalID: 6224024930817484846
+      spriteID: 83a02bc35b37acfe0800000000000000
+      internalID: -1167993931104646600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_2
+      name: BasicEnemy_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 48
-        width: 21
-        height: 10
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01d412b0a00e45480800000000000000
-      internalID: -8911251428918342384
+      spriteID: 58317731ef375b970800000000000000
+      internalID: 8770043384459367301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_3
+      name: BasicEnemy_3
       rect:
         serializedVersion: 2
-        x: 107
-        y: 48
-        width: 12
-        height: 6
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19fc139f453ecd420800000000000000
-      internalID: 2656247834339299217
+      spriteID: 96ae326dfa6133d80800000000000000
+      internalID: -8272243146081703319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_4
+      name: BasicEnemy_4
       rect:
         serializedVersion: 2
-        x: 67
-        y: 1
-        width: 29
-        height: 28
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da636329bfbe0d480800000000000000
-      internalID: -8876335399824902483
+      spriteID: fcfafc7cf61948840800000000000000
+      internalID: 5225461376936292303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_5
+      name: BasicEnemy_5
       rect:
         serializedVersion: 2
-        x: 98
-        y: 1
-        width: 26
-        height: 16
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,8 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1237e0e2f7ab3c150800000000000000
-      internalID: 5891757792927052577
+      spriteID: 0e41507b117e2ced0800000000000000
+      internalID: -2395097988536658720
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3c15c187772f3054b9e77c5458858144
+    spriteID: 3448cb96d61165c4c8f4e55ce3b82a35
     internalID: 0
     vertices: []
     indices: 
@@ -273,14 +273,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Trees_0: 2572236292851511218
-      Trees_1: 6224024930817484846
-      Trees_2: -8911251428918342384
-      Trees_3: 2656247834339299217
-      Trees_4: -8876335399824902483
-      Trees_5: 5891757792927052577
+      BasicEnemy_0: 1702279688969781617
+      BasicEnemy_1: -1167993931104646600
+      BasicEnemy_2: 8770043384459367301
+      BasicEnemy_3: -8272243146081703319
+      BasicEnemy_4: 5225461376936292303
+      BasicEnemy_5: -2395097988536658720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
