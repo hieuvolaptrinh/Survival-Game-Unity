@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         gameUI.SetActive(true);
         currentEnergy = 0;
         UpdateEnergyBar();
+        MainMenu();
     }
 
     public void AddEnergy()
@@ -36,9 +37,6 @@ public class GameManager : MonoBehaviour
         {
             CallBoss();
         }
-
-
-
     }
 
     public void CallBoss()
@@ -61,15 +59,29 @@ public class GameManager : MonoBehaviour
 mainMenu.SetActive(true);
 pauseMenu.SetActive(false);
 gameOverMenu.SetActive(false);
+Time.timeScale = 0f; // Tạm dừng trò chơi
     }
     public void PauseGame(){
       pauseMenu.SetActive(true);
       mainMenu.SetActive(false);
         gameOverMenu.SetActive(false);
+        Time.timeScale = 0f; // Tạm dừng trò chơi
     }
     public void GameOverMenu(){
       gameOverMenu.SetActive(true);
         mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
+    }
+    public void StartGame(){
+        mainMenu.SetActive(false);
+        pauseMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
+        Time.timeScale = 1f; // Tiếp tục trò chơi
+    }
+     public void ResumeGame(){
+        mainMenu.SetActive(false);
+        pauseMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
+        Time.timeScale = 1f; // Tiếp tục trò chơi
     }
 }

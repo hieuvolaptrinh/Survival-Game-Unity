@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Image hpBar; // Tham chiếu đến Image của thanh HP
 
 
+[SerializeField] private GameManager gameManager;
+
+
 
     private void Awake()
     {
@@ -30,6 +33,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
         MovePlayer();
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            
+                gameManager.PauseGame();
+            
+        }
     }
 
     void MovePlayer()
@@ -62,7 +70,7 @@ public class Player : MonoBehaviour
         }
     }
     public void Die(){
-       Destroy(gameObject);
+       gameManager.GameOverMenu();
     }
     private void UpdateHpBar(){
         if(hpBar != null){
