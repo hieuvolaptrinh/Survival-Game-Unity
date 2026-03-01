@@ -46,6 +46,12 @@ public virtual void Die(){
 }
 
 protected virtual void OnCollisionEnter2D(Collision2D collision){
+    // Ignore collision với Energy
+    if(collision.gameObject.CompareTag("Energy")){
+        Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+        return;
+    }
+    
     if(collision.gameObject.CompareTag("Player")){
         Player playerComponent = collision.gameObject.GetComponent<Player>();
         if(playerComponent != null){
@@ -55,6 +61,11 @@ protected virtual void OnCollisionEnter2D(Collision2D collision){
 }
 
 protected virtual void OnCollisionStay2D(Collision2D collision){
+    // Ignore collision với Energy
+    if(collision.gameObject.CompareTag("Energy")){
+        return;
+    }
+    
     if(collision.gameObject.CompareTag("Player")){
         Player playerComponent = collision.gameObject.GetComponent<Player>();
         if(playerComponent != null){

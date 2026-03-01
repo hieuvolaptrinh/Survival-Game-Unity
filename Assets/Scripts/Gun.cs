@@ -62,6 +62,7 @@ public class Gun : MonoBehaviour
         if(Input.GetMouseButtonDown(1) && currentAmmo < maxAmmo) // 1 tương ứng với nút chuột phải
         {
             currentAmmo = maxAmmo;
+        UpdateAmmoText();
         }
     }
 
