@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Cinemachine;
 public class GameManager : MonoBehaviour
 {
     public int currentEnergy;
@@ -16,7 +17,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private AudioManager audioManager;
+[SerializeField] private GameObject winMenu;
 
+[SerializeField] private CinemachineCamera cinemachineCamera;
+
+// red 
+[SerializeField] private GameObject red;
     void Start()
     {
 
@@ -25,6 +32,9 @@ public class GameManager : MonoBehaviour
         currentEnergy = 0;
         UpdateEnergyBar();
         MainMenu();
+        audioManager.StopBackgroundMusic();
+        cinemachineCamera.Lens.OrthographicSize = 7f; // Đặt lại kích thước camera về mặc định
+        red.SetActive(false);
     }
 
     public void AddEnergy()
@@ -45,6 +55,10 @@ public class GameManager : MonoBehaviour
         boss.SetActive(true);
         enemySpawner.SetActive(false);
         gameUI.SetActive(false);
+
+        audioManager.PlayBossMusic();
+        cinemachineCamera.Lens.OrthographicSize = 10;
+        red.SetActive(true);
     }
 
     private void UpdateEnergyBar()
@@ -59,29 +73,44 @@ public class GameManager : MonoBehaviour
 mainMenu.SetActive(true);
 pauseMenu.SetActive(false);
 gameOverMenu.SetActive(false);
+winMenu.SetActive(false);
+
 Time.timeScale = 0f; // Tạm dừng trò chơi
     }
     public void PauseGame(){
       pauseMenu.SetActive(true);
       mainMenu.SetActive(false);
         gameOverMenu.SetActive(false);
+        winMenu.SetActive(false);
         Time.timeScale = 0f; // Tạm dừng trò chơi
     }
     public void GameOverMenu(){
       gameOverMenu.SetActive(true);
         mainMenu.SetActive(false);
             pauseMenu.SetActive(false);
+            winMenu.SetActive(false);
     }
     public void StartGame(){
         mainMenu.SetActive(false);
         pauseMenu.SetActive(false);
         gameOverMenu.SetActive(false);
+        winMenu.SetActive(false);
         Time.timeScale = 1f; // Tiếp tục trò chơi
+        audioManager.PlayDefaultMusic();
+        
     }
      public void ResumeGame(){
         mainMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        winMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         Time.timeScale = 1f; // Tiếp tục trò chơi
+    }
+    public void WinGame(){
+        winMenu.SetActive(true);
+        mainMenu.SetActive(false);
+        pauseMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
+        Time.timeScale = 0f; // Tạm dừng trò chơi
     }
 }

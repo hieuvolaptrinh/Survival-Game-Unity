@@ -15,6 +15,8 @@ public class Gun : MonoBehaviour
     // tương tác với TextMesh Pro đã tạo bên trong Canvas để hiển thị số đạn hiện tại
     [SerializeField] private TMPro.TextMeshProUGUI ammoText;
 
+// tương tác âm thanh
+[SerializeField] private AudioManager audioManager;
 
     void Start()
     {
@@ -54,6 +56,7 @@ public class Gun : MonoBehaviour
             nextShot = Time.time + shotDelay;
             currentAmmo--;
             UpdateAmmoText();
+            audioManager.PlayShootSound();
         }
     }
 
@@ -63,6 +66,7 @@ public class Gun : MonoBehaviour
         {
             currentAmmo = maxAmmo;
         UpdateAmmoText();
+        audioManager.PlayReLoadSound();
         }
     }
 

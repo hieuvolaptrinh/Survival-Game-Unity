@@ -10,6 +10,7 @@ TagManager:
   - Explosion
   - EnemyBullet
   - Usb
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -82,6 +83,9 @@ TagManager:
     locked: 0
   - name: Blood
     uniqueID: 745799659
+    locked: 0
+  - name: GameUI
+    uniqueID: 670336467
     locked: 0
   m_RenderingLayers:
   - Default
